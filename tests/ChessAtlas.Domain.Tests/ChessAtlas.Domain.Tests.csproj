@@ -5,6 +5,8 @@
     <IsPackable>false</IsPackable>
     <!-- xunit v3 runs as its own executable under Microsoft.Testing.Platform. -->
     <OutputType>Exe</OutputType>
+    <!-- xunit.v3 generates the entry point; the test SDK must not add a second one. -->
+    <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
 
   <ItemGroup>

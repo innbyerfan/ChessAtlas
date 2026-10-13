@@ -52,9 +52,6 @@ jobs:
           # No VSTest-style --logger flags: .NET 10 drives Microsoft.Testing.Platform, which
           # rejects them. xunit.v3 is an MTP-native runner, so the default output is enough.
           dotnet test ChessAtlas.sln -c Release --no-build 2>&1 | tee -a ci-artifacts/ci-log.txt
-          echo "--- dotnet test --help (recorded once, to keep this workflow honest) ---" \
-            | tee -a ci-artifacts/ci-log.txt
-          dotnet test --help 2>&1 | head -40 | tee -a ci-artifacts/ci-log.txt
 
       - name: Assert tests actually ran
         shell: python

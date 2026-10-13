@@ -3,6 +3,7 @@ using ChessAtlas.Domain.Provenance;
 using ChessAtlas.Infrastructure.DataSources;
 using ChessAtlas.Infrastructure.Openings;
 using ChessAtlas.Infrastructure.Persistence;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
