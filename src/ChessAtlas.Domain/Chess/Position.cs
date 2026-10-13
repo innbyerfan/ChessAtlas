@@ -206,9 +206,9 @@ public sealed class Position
 
     /// <summary>
     /// The identity of the position for transposition purposes: piece placement, side to move and
-    castling rights, plus an en-passant file <em>only when an en-passant capture is actually
-    legal</em>. The half-move and full-move counters are excluded on purpose — they are bookkeeping,
-    not position.
+    /// castling rights, plus an en-passant file <em>only when an en-passant capture is actually
+    /// legal</em>. The half-move and full-move counters are excluded on purpose: they are
+    /// bookkeeping, not position.
     /// </summary>
     public string ToPositionKey()
     {
