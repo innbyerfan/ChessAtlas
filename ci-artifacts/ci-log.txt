@@ -1,28 +1,67 @@
   Determining projects to restore...
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj (in 190 ms).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/ChessAtlas.Application.csproj (in 2.26 sec).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj (in 2.13 sec).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj (in 94 ms).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj (in 2.37 sec).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj (in 2.4 sec).
-/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Provenance/DataProvenance.cs(23,13): error CS8618: Non-nullable property 'Uri' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
-/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/MoveSequence.cs(45,27): error CS0117: 'ArgumentException' does not contain a definition for 'ThrowIfNull' [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
-/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/MoveSequence.cs(72,27): error CS0117: 'ArgumentException' does not contain a definition for 'ThrowIfNull' [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj (in 94 ms).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj (in 2.85 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj (in 2.97 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj (in 2.97 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/ChessAtlas.Application.csproj (in 3 ms).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj (in 2.99 sec).
+  ChessAtlas.Domain -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/bin/Release/net10.0/ChessAtlas.Domain.dll
+  ChessAtlas.Application -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/bin/Release/net10.0/ChessAtlas.Application.dll
+  ChessAtlas.Domain.Tests -> /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/DependencyInjection.cs(49,36): error CS0246: The type or namespace name 'SqliteConnectionStringBuilder' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj]
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/DependencyInjection.cs(53,27): error CS0103: The name 'SqliteJournalMode' does not exist in the current context [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj]
 
 Build FAILED.
 
-/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Provenance/DataProvenance.cs(23,13): error CS8618: Non-nullable property 'Uri' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
-/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/MoveSequence.cs(45,27): error CS0117: 'ArgumentException' does not contain a definition for 'ThrowIfNull' [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
-/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/MoveSequence.cs(72,27): error CS0117: 'ArgumentException' does not contain a definition for 'ThrowIfNull' [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/DependencyInjection.cs(49,36): error CS0246: The type or namespace name 'SqliteConnectionStringBuilder' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj]
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/DependencyInjection.cs(53,27): error CS0103: The name 'SqliteJournalMode' does not exist in the current context [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj]
     0 Warning(s)
-    3 Error(s)
+    2 Error(s)
 
-Time Elapsed 00:00:05.24
-Test run for /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/bin/Release/net10.0/ChessAtlas.Application.Tests.dll (.NETCoreApp,Version=v10.0)
-The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/bin/Release/net10.0/ChessAtlas.Application.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
-Test run for /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll (.NETCoreApp,Version=v10.0)
-Test run for /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/bin/Release/net10.0/ChessAtlas.Infrastructure.Tests.dll (.NETCoreApp,Version=v10.0)
-The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
-The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/bin/Release/net10.0/ChessAtlas.Infrastructure.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
+Time Elapsed 00:00:04.93
+/home/runner/.nuget/packages/microsoft.testing.platform.msbuild/2.5.1/buildMultiTargeting/Microsoft.Testing.Platform.MSBuild.targets(395,5): error : Testing with VSTest target is no longer supported by Microsoft.Testing.Platform on .NET 10 SDK and later. If you use dotnet test, you should opt-in to the new dotnet test experience. For more information, see https://aka.ms/dotnet-test-mtp-error [/home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj]
+/home/runner/.nuget/packages/microsoft.testing.platform.msbuild/2.5.1/buildMultiTargeting/Microsoft.Testing.Platform.MSBuild.targets(395,5): error : Testing with VSTest target is no longer supported by Microsoft.Testing.Platform on .NET 10 SDK and later. If you use dotnet test, you should opt-in to the new dotnet test experience. For more information, see https://aka.ms/dotnet-test-mtp-error [/home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj]
+/home/runner/.nuget/packages/microsoft.testing.platform.msbuild/2.5.1/buildMultiTargeting/Microsoft.Testing.Platform.MSBuild.targets(395,5): error : Testing with VSTest target is no longer supported by Microsoft.Testing.Platform on .NET 10 SDK and later. If you use dotnet test, you should opt-in to the new dotnet test experience. For more information, see https://aka.ms/dotnet-test-mtp-error [/home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj]
+--- dotnet test --help (recorded once, to keep this workflow honest) ---
+Description:
+  .NET Test Command for VSTest. To use Microsoft.Testing.Platform, opt-in to the Microsoft.Testing.Platform-based command via global.json. For more information, see https://aka.ms/dotnet-test.
+
+Usage:
+  dotnet test [options] [[--] <additional arguments>...]]
+
+Options:
+  -s, --settings <SETTINGS_FILE>       The settings file to use when running tests.
+  -t, --list-tests                     List the discovered tests instead of running the tests. [default: False]
+  -e, --environment <NAME="VALUE">     Sets the value of an environment variable. 
+                                       Creates the variable if it does not exist, overrides if it does. 
+                                       This will force the tests to be run in an isolated process. 
+                                       This argument can be specified multiple times to provide multiple variables.
+  
+                                       Examples:
+                                       -e VARIABLE=abc
+                                       -e VARIABLE="value with spaces"
+                                       -e VARIABLE="value;seperated with;semicolons"
+                                       -e VAR1=abc -e VAR2=def -e VAR3=ghi
+  --filter <EXPRESSION>                Run tests that match the given expression.
+                                                                               Examples:
+                                                                               Run tests with priority set to 1: --filter "Priority = 1"
+                                                                               Run a test with the specified full name: --filter "FullyQualifiedName=Namespace.ClassName.MethodName"
+                                                                               Run tests that contain the specified name: --filter "FullyQualifiedName~Namespace.Class"
+                                                                               See https://aka.ms/vstest-filtering for more information on filtering support.
+  --test-adapter-path <ADAPTER_PATH>   The path to the custom adapters to use for the test run.
+  -l, --logger <LOGGER>                The logger to use for test results.
+                                                                               Examples:
+                                                                               Log in trx format using a unique file name: --logger trx
+                                                                               Log in trx format using the specified file name: --logger "trx;LogFileName=<TestResults.trx>"
+                                                                               See https://aka.ms/vstest-report for more information on logger arguments.
+  -o, --output <OUTPUT_DIR>            The output directory to place built artifacts in.
+  --artifacts-path <ARTIFACTS_DIR>     The artifacts path. All output from the project, including build, publish, and pack output, will go in subfolders under the specified path.
+  -d, --diag <LOG_FILE>                Enable verbose logging to the specified file.
+  --no-build                           Do not build the project before testing. Implies --no-restore. [default: False]
+  --results-directory <RESULTS_DIR>    The directory where the test results will be placed.
+                                       The specified directory will be created if it does not exist.
+  --collect <DATA_COLLECTOR_NAME>      The friendly name of the data collector to use for the test run.
+                                                                               More info here: https://aka.ms/vstest-collect
+  --blame                              Runs the tests in blame mode. This option is helpful in isolating problematic tests that cause the test host to crash or hang, but it does not create a memory dump by default.
 
 ASSERTION: test assemblies reporting totals: 0, total=0, passed=0, failed=0
