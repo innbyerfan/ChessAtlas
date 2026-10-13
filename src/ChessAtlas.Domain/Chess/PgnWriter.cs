@@ -97,7 +97,14 @@ public static class PgnWriter
     private static string EscapeTagValue(string value) =>
         value.Replace("\\", "\\\\").Replace("\"", "\\\"");
 
-    private struct Emitter
+    /// <summary>
+    /// The output cursor. This is a class, not a struct, on purpose: <see cref="WriteLine"/> recurses
+    /// into variations and receives the emitter through an ordinary parameter, so a value type would
+    /// hand each call its own copy of the column counter. The caller's copy would then still read
+    /// column zero and <see cref="Write"/> would glue the result token straight onto the last move
+    /// (<c>3. Bb5 a61-0</c>), which no reader can parse back.
+    /// </summary>
+    private sealed class Emitter
     {
         private readonly StringBuilder _sb;
         private readonly int _max;

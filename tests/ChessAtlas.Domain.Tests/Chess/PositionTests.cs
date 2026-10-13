@@ -83,26 +83,29 @@ public sealed class PositionTests
     [Fact]
     public void Castling_is_blocked_by_a_piece_in_the_way()
     {
-        var position = At("4k3/8/8/8/8/8/8/R2QK2R w KQ - 0 1");
+        // b1 and f1 are occupied, so both castles are blocked, but neither square the king
+        // uses (c1, d1, f1, g1) is attacked -- this isolates "blocked" from "attacked".
+        var position = At("4k3/8/8/8/8/8/8/RB1QKB1R w KQ - 0 1");
 
         Assert.DoesNotContain(Move.ParseUci("e1g1"), position.GenerateLegalMoves());
         Assert.DoesNotContain(Move.ParseUci("e1c1"), position.GenerateLegalMoves());
+        Assert.Contains(Move.ParseUci("e1d1"), position.GenerateLegalMoves());
     }
 
     [Fact]
     public void Castling_is_illegal_out_of_through_or_into_check()
     {
-        // Black rook on e8 is gone; a black rook on the e-file attacks e1, a bishop attacks f1.
-        var inCheck = At("4r3/8/8/8/8/8/8/R3K2R w KQ - 0 1");
+        // A black rook on the e-file attacks e1 itself, so castling is out of check.
+        var inCheck = At("4r2k/8/8/8/8/8/8/R3K2R w KQ - 0 1");
         Assert.DoesNotContain(Move.ParseUci("e1g1"), inCheck.GenerateLegalMoves());
         Assert.DoesNotContain(Move.ParseUci("e1c1"), inCheck.GenerateLegalMoves());
 
         // Squares the king crosses are attacked, but e1 itself is not.
-        var through = At("5r2/8/8/8/8/8/8/R3K2R w KQ - 0 1");
+        var through = At("5r1k/8/8/8/8/8/8/R3K2R w KQ - 0 1");
         Assert.DoesNotContain(Move.ParseUci("e1g1"), through.GenerateLegalMoves());
 
         // Only the square the king crosses is attacked, not e1 or g1: still illegal.
-        var crossed = At("3r4/8/8/8/8/8/8/R3K2R w KQ - 0 1");
+        var crossed = At("3r3k/8/8/8/8/8/8/R3K2R w KQ - 0 1");
         Assert.DoesNotContain(Move.ParseUci("e1c1"), crossed.GenerateLegalMoves());
     }
 
@@ -250,7 +253,9 @@ public sealed class PositionTests
         Assert.True(position.IsInCheck);
         Assert.Empty(position.GenerateLegalMoves());
         Assert.Equal(GameStatus.Checkmate, position.EvaluateStatus());
-        Assert.Equal(GameResult.WhiteWins, GameResultExtensions.FromStatus(GameStatus.Checkmate, position.SideToMove));
+        // White is the side that is mated, so the result is scored for Black.
+        Assert.Equal(Side.White, position.SideToMove);
+        Assert.Equal(GameResult.BlackWins, GameResultExtensions.FromStatus(GameStatus.Checkmate, position.SideToMove));
     }
 
     [Fact]
@@ -267,7 +272,7 @@ public sealed class PositionTests
     public void A_pinned_piece_cannot_move_off_the_pin()
     {
         // White king e1, white knight e2, black rook e8: the knight may not move at all.
-        var position = At("4r3/8/8/8/8/8/4N3/4K3 w - - 0 1");
+        var position = At("4r2k/8/8/8/8/8/4N3/4K3 w - - 0 1");
         var knightMoves = position.GenerateLegalMoves().Where(m => m.From == Square.Parse("e2")).ToList();
 
         Assert.Empty(knightMoves);
@@ -276,7 +281,8 @@ public sealed class PositionTests
     [Fact]
     public void The_king_may_not_step_next_to_the_opposing_king()
     {
-        var position = At("8/8/8/4k3/8/8/8/4K3 w - - 0 1");
+        // Black king on e3: e2 would put the kings on adjacent squares, d1 is two files away.
+        var position = At("8/8/8/8/8/4k3/8/4K3 w - - 0 1");
 
         Assert.DoesNotContain(Move.ParseUci("e1e2"), position.GenerateLegalMoves());
         Assert.Contains(Move.ParseUci("e1d1"), position.GenerateLegalMoves());
@@ -372,11 +378,13 @@ public sealed class PositionTests
     [Fact]
     public void Identical_positions_reached_differently_share_a_zobrist_key()
     {
+        // The Ruy Lopez reached both ways. Both orders end on Bb5, so neither position carries
+        // an en-passant square -- ending on a double push instead would make them differ.
         var a = Position.StartPosition;
-        foreach (var uci in new[] { "e2e4", "e7e5", "g1f3", "b8c6" }) a.MakeMove(Move.ParseUci(uci));
+        foreach (var uci in new[] { "e2e4", "e7e5", "g1f3", "b8c6", "f1b5" }) a.MakeMove(Move.ParseUci(uci));
 
         var b = Position.StartPosition;
-        foreach (var uci in new[] { "g1f3", "b8c6", "e2e4", "e7e5" }) b.MakeMove(Move.ParseUci(uci));
+        foreach (var uci in new[] { "g1f3", "b8c6", "e2e4", "e7e5", "f1b5" }) b.MakeMove(Move.ParseUci(uci));
 
         Assert.Equal(a.ZobristKey, b.ZobristKey);
         Assert.Equal(a.ToPositionKey(), b.ToPositionKey());

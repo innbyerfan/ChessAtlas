@@ -107,7 +107,9 @@ public sealed class PgnTests
         var game = Assert.Single(PgnReader.Read(pgn));
 
         Assert.Equal(4, game.Moves.Count);
-        Assert.Equal("Nf3", game.Moves[1].San);
+        Assert.Equal("e4", game.Moves[0].San);
+        Assert.Equal("e5", game.Moves[1].San);
+        Assert.Equal("Nf3", game.Moves[2].San);
         Assert.Equal("Nc6", game.Moves[3].San);
 
         // The variation follows 2. Nf3, so it hangs off the third move of the main line.

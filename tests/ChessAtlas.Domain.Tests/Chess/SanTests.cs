@@ -88,13 +88,13 @@ public sealed class SanTests
     [Fact]
     public void Ambiguity_that_a_file_cannot_resolve_falls_back_to_the_rank()
     {
-        // Knights on a1, a5 and c2 all reach b3. a1 and a5 share the a-file, so neither can be
-        // named by file; they fall back to the rank. c2 is the only knight on the c-file.
-        var position = At("4k3/8/8/N7/8/8/2N5/N3K3 w - - 0 1");
+        // Knights on a1, a5 and d4 all reach b3. a1 and a5 share the a-file, so neither can be
+        // named by file and they fall back to the rank; d4 is the only knight on the d-file.
+        var position = At("4k3/N7/8/3N4/8/8/8/N3K3 w - - 0 1");
 
         Assert.Equal("N1b3", San.ToSan(position, Move.ParseUci("a1b3")));
         Assert.Equal("N5b3", San.ToSan(position, Move.ParseUci("a5b3")));
-        Assert.Equal("Ncb3", San.ToSan(position, Move.ParseUci("c2b3")));
+        Assert.Equal("Ndb3", San.ToSan(position, Move.ParseUci("d4b3")));
     }
 
     [Theory]

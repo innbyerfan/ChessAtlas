@@ -64,20 +64,36 @@ jobs:
         run: |
           import re, sys, pathlib
           log = pathlib.Path("ci-artifacts/ci-log.txt").read_text(errors="replace")
-          # VSTest prints "Total: 42"; MTP prints "total: 42". Match either.
-          totals = [int(n) for n in re.findall(r"(?i)\btotal[:=]\s*(\d+)", log)]
-          failed = sum(int(n) for n in re.findall(r"(?i)\bfailed[:=]\s*(\d+)", log))
-          passed = sum(int(n) for n in re.findall(r"(?i)\bpassed[:=]\s*(\d+)", log))
-          summary = f"test assemblies reporting totals: {len(totals)}, total={sum(totals)}, passed={passed}, failed={failed}"
+
+          # xunit.v3's in-process runner summarises one assembly per line as
+          #   ChessAtlas.Domain.Tests  Total: 183, Errors: 0, Failed: 11, Skipped: 0, Not Run: 0
+          # It prints no "Passed:" count, so passing is derived rather than grepped. Anchoring on
+          # "Total:" keeps the numbers tied to the summary lines and out of incidental log prose.
+          rows = re.findall(
+              r"(?i)\btotal:\s*(\d+),\s*errors:\s*(\d+),\s*failed:\s*(\d+),\s*skipped:\s*(\d+)",
+              log)
+
+          total = sum(int(r[0]) for r in rows)
+          errors = sum(int(r[1]) for r in rows)
+          failed = sum(int(r[2]) for r in rows)
+          skipped = sum(int(r[3]) for r in rows)
+          passed = total - failed - skipped - errors
+
+          summary = (f"assemblies: {len(rows)}, total={total}, passed={passed}, "
+                     f"failed={failed}, errors={errors}, skipped={skipped}")
           print(summary)
           pathlib.Path("ci-artifacts/ci-log.txt").open("a").write("\nASSERTION: " + summary + "\n")
-          if sum(totals) == 0:
+
+          if len(rows) == 0 or total == 0:
               print("::error::No tests were discovered. A green build with zero tests proves nothing.")
               sys.exit(1)
-          if failed:
+          if failed or errors:
+              print(f"::error::{failed} test(s) failed and {errors} errored.")
               sys.exit(1)
+          print(f"All {passed} test(s) passed.")
 
       - name: Check EF Core model snapshot drift
+        if: always()
         continue-on-error: true
         run: |
           dotnet tool install --global dotnet-ef --version 10.0.12 2>&1 | tee -a ci-artifacts/ci-log.txt
