@@ -1,37 +1,30 @@
   Determining projects to restore...
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/ChessAtlas.Application.csproj (in 1.54 sec).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj (in 795 ms).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj (in 2 ms).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj (in 2.61 sec).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj (in 2.62 sec).
-  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj (in 2.85 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/ChessAtlas.Application.csproj (in 1.08 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj (in 2.85 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj (in 1.53 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj (in 2.85 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj (in 1 ms).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj (in 3.33 sec).
   ChessAtlas.Domain -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/bin/Release/net10.0/ChessAtlas.Domain.dll
   ChessAtlas.Application -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/bin/Release/net10.0/ChessAtlas.Application.dll
   ChessAtlas.Domain.Tests -> /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll
   ChessAtlas.Infrastructure -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Release/net10.0/ChessAtlas.Infrastructure.dll
-  ChessAtlas.Infrastructure.Tests -> /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/bin/Release/net10.0/ChessAtlas.Infrastructure.Tests.dll
   ChessAtlas.Application.Tests -> /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/bin/Release/net10.0/ChessAtlas.Application.Tests.dll
+  ChessAtlas.Infrastructure.Tests -> /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/bin/Release/net10.0/ChessAtlas.Infrastructure.Tests.dll
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:07.89
+Time Elapsed 00:00:05.80
 ===== tests/ChessAtlas.Domain.Tests =====
 xUnit.net v3 In-Process Runner v4.0.2+0c7aa4991f (64-bit .NET 10.0.12)
 [37m  Discovering: ChessAtlas.Domain.Tests
 [0m[37m  Discovered:  ChessAtlas.Domain.Tests
 [0m[37m  Starting:    ChessAtlas.Domain.Tests
-[0m[91m    ChessAtlas.Domain.Tests.Chess.MoveSequenceTests.Lines_from_a_non_standard_start_render_black_move_numbers_correctly [FAIL]
-[0m[37m      System.FormatException : Illegal or unresolvable move 'e5' at ply 1 of the line 'e5'.
-[0m[90m      Stack Trace:
-[0m[37m        src/ChessAtlas.Domain/Chess/MoveSequence.cs(58,0): at ChessAtlas.Domain.Chess.MoveSequence.FromSan(String sanText, String startingFen)
-[0m[37m        tests/ChessAtlas.Domain.Tests/Chess/MoveSequenceTests.cs(93,0): at ChessAtlas.Domain.Tests.Chess.MoveSequenceTests.Lines_from_a_non_standard_start_render_black_move_numbers_correctly()
-[0m[37m           at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
-[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 [0m[37m  Finished:    ChessAtlas.Domain.Tests (ID = '38a62f5aef2c61a8937586b99558027b61c528b39ff199ffdac0fa59cd928d82')
 [0m[37m=== TEST EXECUTION SUMMARY ===
-[0m[37m   ChessAtlas.Domain.Tests  Total: 183, Errors: 0, Failed: 1, Skipped: 0, Not Run: 0, Time: 2.579s
+[0m[37m   ChessAtlas.Domain.Tests  Total: 183, Errors: 0, Failed: 0, Skipped: 0, Not Run: 0, Time: 2.522s
 [0m[0m===== tests/ChessAtlas.Application.Tests =====
 xUnit.net v3 In-Process Runner v4.0.2+0c7aa4991f (64-bit .NET 10.0.12)
 [37m  Discovering: ChessAtlas.Application.Tests
@@ -39,91 +32,293 @@ xUnit.net v3 In-Process Runner v4.0.2+0c7aa4991f (64-bit .NET 10.0.12)
 [0m[37m  Starting:    ChessAtlas.Application.Tests
 [0m[37m  Finished:    ChessAtlas.Application.Tests (ID = '9452e3ed6d2aef3d85c23cef123c1bff871c9ea612d27edccbdd078fdf34a438')
 [0m[37m=== TEST EXECUTION SUMMARY ===
-[0m[37m   ChessAtlas.Application.Tests  Total: 16, Errors: 0, Failed: 0, Skipped: 0, Not Run: 0, Time: 0.626s
+[0m[37m   ChessAtlas.Application.Tests  Total: 16, Errors: 0, Failed: 0, Skipped: 0, Not Run: 0, Time: 0.609s
 [0m[0m===== tests/ChessAtlas.Infrastructure.Tests =====
 xUnit.net v3 In-Process Runner v4.0.2+0c7aa4991f (64-bit .NET 10.0.12)
 [37m  Discovering: ChessAtlas.Infrastructure.Tests
 [0m[37m  Discovered:  ChessAtlas.Infrastructure.Tests
 [0m[37m  Starting:    ChessAtlas.Infrastructure.Tests
 [0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_sorts_by_eco_with_uncoded_openings_last [FAIL]
-[0m[37m      Assert.Equal() Failure: Collections differ
-[0m[37m      Expected: string[]                                      [···, "B20", "B90", "C60", "C65"]
-[0m[37m      Actual:   ListSelectIterator<OpeningSummaryDto, string> [···, "B20", "B90", "C60", "C65", null]
-[0m[37m                                                                                                ↑ (pos 5)
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
 [0m[90m      Stack Trace:
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(283,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_sorts_by_eco_with_uncoded_openings_last()
-[0m[37m        --- End of stack trace from previous location ---
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_matches_on_name_and_eco [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Lines_carry_the_licence_of_the_source_they_came_from [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Looking_up_a_missing_opening_returns_null_not_an_exception [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 [0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.An_empty_catalogue_reports_empty_rather_than_throwing [FAIL]
-[0m[37m      System.NotSupportedException : SQLite does not support expressions of type 'DateTimeOffset' in ORDER BY clauses. Convert the values to a supported type, or use LINQ to Objects to order the results on the client side.
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
 [0m[90m      Stack Trace:
-[0m[37m           at Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.TranslateOrderBy(ShapedQueryExpression source, LambdaExpression keySelector, Boolean ascending)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutorExpression[TResult](Expression query)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
-[0m[37m           at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass11_0`1.<ExecuteCore>b__0()
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
-[0m[37m        src/ChessAtlas.Infrastructure/Openings/OpeningCatalogImporter.cs(38,0): at ChessAtlas.Infrastructure.Openings.OpeningCatalogImporter.GetStateAsync(CancellationToken cancellationToken)
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(192,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.An_empty_catalogue_reports_empty_rather_than_throwing()
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(192,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.An_empty_catalogue_reports_empty_rather_than_throwing()
-[0m[37m        --- End of stack trace from previous location ---
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Prefix_lookup_feeds_a_picker [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.The_same_position_reached_by_different_names_is_stored_twice_and_found_together [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Importing_creates_the_opening_and_its_ancestors [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 [0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Catalogue_state_reports_counts_and_the_latest_snapshot [FAIL]
-[0m[37m      System.NotSupportedException : SQLite does not support expressions of type 'DateTimeOffset' in ORDER BY clauses. Convert the values to a supported type, or use LINQ to Objects to order the results on the client side.
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
 [0m[90m      Stack Trace:
-[0m[37m           at Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.TranslateOrderBy(ShapedQueryExpression source, LambdaExpression keySelector, Boolean ascending)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutorExpression[TResult](Expression query)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
-[0m[37m           at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass11_0`1.<ExecuteCore>b__0()
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
-[0m[37m           at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
-[0m[37m        src/ChessAtlas.Infrastructure/Openings/OpeningCatalogImporter.cs(38,0): at ChessAtlas.Infrastructure.Openings.OpeningCatalogImporter.GetStateAsync(CancellationToken cancellationToken)
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(178,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Catalogue_state_reports_counts_and_the_latest_snapshot()
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(183,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Catalogue_state_reports_counts_and_the_latest_snapshot()
-[0m[37m        --- End of stack trace from previous location ---
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 [0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Migrations_create_the_expected_schema [FAIL]
-[0m[37m      Assert.Equal() Failure: Collections differ
-[0m[37m      Expected: string[]     [···, "OpeningAliases", "OpeningLines", "Openings", "__EFMigrationsHistory"]
-[0m[37m      Actual:   List<string> [···, "OpeningAliases", "OpeningLines", "Openings", "__EFMigrationsHistory", "__EFMigrationsLock"]
-[0m[37m                                                                                                          ↑ (pos 5)
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
 [0m[90m      Stack Trace:
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(46,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Migrations_create_the_expected_schema()
-[0m[37m           at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Reimporting_the_same_batch_changes_nothing [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Delete_by_provenance_removes_only_that_snapshot [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_paging_is_clamped_to_a_sane_range [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_filters_by_family [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Detail_returns_aliases_children_and_the_parent_name [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_filters_by_line_kind_so_gambits_can_be_found_on_their_own [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_reports_the_eco_section_name [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Detail_of_a_child_names_its_parent [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
 [0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 [0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_with_no_filter_returns_everything_paged [FAIL]
-[0m[37m      Assert.Equal() Failure: Values differ
-[0m[37m      Expected: 5
-[0m[37m      Actual:   6
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
 [0m[90m      Stack Trace:
-[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(223,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_with_no_filter_returns_everything_paged()
-[0m[37m        --- End of stack trace from previous location ---
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Ancestors_are_linked_to_their_parents [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Search_filters_by_eco_prefix [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.An_imported_line_can_be_replayed_from_the_database [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[0m[91m    ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests.Provenance_is_registered_once_per_snapshot [FAIL]
+[0m[37m      System.InvalidOperationException : An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ChessAtlasDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+[0m[90m      Stack Trace:
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+[0m[37m           at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+[0m[37m           at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/TestDatabase.cs(30,0): at ChessAtlas.Infrastructure.Tests.TestDatabase..ctor()
+[0m[37m        tests/ChessAtlas.Infrastructure.Tests/Openings/OpeningCatalogPersistenceTests.cs(15,0): at ChessAtlas.Infrastructure.Tests.Openings.OpeningCatalogPersistenceTests..ctor()
+[0m[37m           at InvokeStub_OpeningCatalogPersistenceTests..ctor(Object, Object, IntPtr*)
+[0m[37m           at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 [0m[37m  Finished:    ChessAtlas.Infrastructure.Tests (ID = 'f42db8261e80d1c80bd5b9be3b39ae0888c080ba97d4767a05396bd06ee7b1cc')
 [0m[37m=== TEST EXECUTION SUMMARY ===
-[0m[37m   ChessAtlas.Infrastructure.Tests  Total: 30, Errors: 0, Failed: 5, Skipped: 0, Not Run: 0, Time: 2.259s
+[0m[37m   ChessAtlas.Infrastructure.Tests  Total: 30, Errors: 0, Failed: 23, Skipped: 0, Not Run: 0, Time: 1.088s
 [0m[0m
-ASSERTION: assemblies: 3, total=229, passed=223, failed=6, errors=0, skipped=0
+ASSERTION: assemblies: 3, total=229, passed=206, failed=23, errors=0, skipped=0
 You can invoke the tool using the following command: dotnet-ef
 Tool 'dotnet-ef' (version '10.0.12') was successfully installed.
 --- dotnet ef migrations has-pending-model-changes ---
