@@ -63,7 +63,7 @@ public static class PgnReader
                     hasContent = false;
                 }
 
-                tagBuffer.Add(ParseTagPair(line));
+                tagBuffer.AddRange(ParseTagPairs(line));
                 hasContent = true;
                 continue;
             }
@@ -378,25 +378,83 @@ public static class PgnReader
         return trimmed.Length > 0 && trimmed[0] == '[';
     }
 
-    private static (string Key, string Value) ParseTagPair(string line)
+    /// <summary>
+    /// Extracts every tag pair on a line.
+    ///
+    /// <para>
+    /// Scanned by hand rather than split on whitespace, for two reasons that both occur in real
+    /// files: some exports put several tag pairs on one line, and a value may contain an escaped
+    /// quote. Splitting on the first space swallows the rest of the line into the first tag;
+    /// splitting on the last quote merges two tags into one value.
+    /// </para>
+    /// </summary>
+    private static List<(string Key, string Value)> ParseTagPairs(string line)
     {
-        var trimmed = line.Trim();
-        var keyStart = trimmed.IndexOf('[');
-        var keyEnd = trimmed.IndexOf(' ');
-        if (keyStart < 0 || keyEnd < 0) return ("?", trimmed);
+        var result = new List<(string, string)>();
+        var i = 0;
 
-        var key = trimmed[(keyStart + 1)..keyEnd].Trim();
-        var valueStart = trimmed.IndexOf('"');
-        var valueEnd = trimmed.LastIndexOf('"');
-        if (valueStart < 0 || valueEnd <= valueStart) return (key, string.Empty);
+        while (i < line.Length)
+        {
+            if (line[i] != '[')
+            {
+                i++;
+                continue;
+            }
 
-        var raw = trimmed[(valueStart + 1)..valueEnd];
-        return (key, UnescapeTagValue(raw));
+            var keyStart = i + 1;
+            var cursor = keyStart;
+            while (cursor < line.Length && !char.IsWhiteSpace(line[cursor]) && line[cursor] != '"') cursor++;
+
+            var key = line[keyStart..cursor].Trim();
+            if (key.Length == 0)
+            {
+                i++;
+                continue;
+            }
+
+            var quoteOpen = line.IndexOf('"', cursor);
+            if (quoteOpen < 0)
+            {
+                i++;
+                continue;
+            }
+
+            var value = new StringBuilder();
+            var j = quoteOpen + 1;
+            var closed = false;
+            while (j < line.Length)
+            {
+                var c = line[j];
+                if (c == '\\' && j + 1 < line.Length)
+                {
+                    value.Append(line[j + 1]);
+                    j += 2;
+                    continue;
+                }
+
+                if (c == '"')
+                {
+                    closed = true;
+                    j++;
+                    break;
+                }
+
+                value.Append(c);
+                j++;
+            }
+
+            if (!closed)
+            {
+                i++;
+                continue;
+            }
+
+            result.Add((key, value.ToString()));
+            i = j;
+        }
+
+        return result;
     }
-
-    private static string UnescapeTagValue(string raw) =>
-        raw.Replace("\\\"", "\"").Replace("\\\\", "\\");
-
     private static bool EndsWithResult(StringBuilder moveText)
     {
         // Cheap guard before tokenising: only a trailing result token ends a game.

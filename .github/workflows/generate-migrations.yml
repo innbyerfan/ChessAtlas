@@ -1,0 +1,79 @@
+# Regenerates the EF Core migration set from the current model and commits it.
+#
+# Why a workflow instead of a local command: `dotnet ef migrations add` has to run against the exact
+# EF Core version the project pins, and the development sandbox has no .NET SDK. Running it here
+# means the checked-in migration and ModelSnapshot are always produced by the same toolchain CI
+# builds with, so the snapshot can never drift from what the tests apply.
+#
+# Trigger it by putting [gen-migrations] in a commit message:
+#   git commit --allow-empty -m "chore: refresh migrations [gen-migrations]"
+name: generate-migrations
+
+on:
+  push:
+    branches:
+      - "arena/**"
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+
+jobs:
+  generate:
+    if: contains(github.event.head_commit.message, '[gen-migrations]') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Install dotnet-ef
+        run: |
+          dotnet tool install --global dotnet-ef --version 10.0.12
+          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+
+      - name: Regenerate the initial migration
+        run: |
+          set -euo pipefail
+          OUT=src/ChessAtlas.Infrastructure/Persistence/Migrations
+          rm -rf "$OUT"
+          dotnet ef migrations add InitialSchema \
+            --project src/ChessAtlas.Infrastructure \
+            --startup-project src/ChessAtlas.Infrastructure \
+            --output-dir Persistence/Migrations
+          ls -la "$OUT"
+
+      - name: Verify the migration applies to a clean database
+        run: |
+          set -euo pipefail
+          dotnet ef database update \
+            --project src/ChessAtlas.Infrastructure \
+            --startup-project src/ChessAtlas.Infrastructure \
+            --connection "Data Source=/tmp/chessatlas-migration-check.db"
+          echo "Migration applied cleanly to a fresh SQLite database."
+          rm -f /tmp/chessatlas-migration-check.db chessatlas-designtime.db
+
+      - name: Commit
+        run: |
+          set -euo pipefail
+          git config user.name  "chessatlas-ci[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/ChessAtlas.Infrastructure/Persistence/Migrations
+          if git diff --cached --quiet; then
+            echo "Migrations unchanged."
+            exit 0
+          fi
+          git commit -m "infra: regenerate EF Core initial migration [skip ci]"
+          git pull --rebase origin "${GITHUB_REF#refs/heads/}" || git rebase --abort
+          git push origin HEAD:"${GITHUB_REF#refs/heads/}"

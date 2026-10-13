@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "arena/**"
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "true"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+          cache: false
+
+      - name: Prepare
+        run: mkdir -p ci-artifacts
+
+      - name: Restore
+        run: dotnet restore ChessAtlas.sln 2>&1 | tee -a ci-artifacts/ci-log.txt
+
+      - name: Build (warnings are errors here)
+        run: |
+          dotnet build ChessAtlas.sln --no-restore -c Release \
+            /p:TreatWarningsAsErrors=true \
+            2>&1 | tee -a ci-artifacts/ci-log.txt
+
+      - name: Test
+        run: |
+          dotnet test ChessAtlas.sln -c Release --no-build \
+            --logger "console;verbosity=normal" \
+            2>&1 | tee -a ci-artifacts/ci-log.txt
+
+      - name: Assert tests actually ran
+        shell: python
+        run: |
+          import re, sys, pathlib
+          log = pathlib.Path("ci-artifacts/ci-log.txt").read_text(errors="replace")
+          totals = [int(n) for n in re.findall(r"Total:\s*(\d+)", log)]
+          failed = sum(int(n) for n in re.findall(r"Failed:\s*(\d+)", log))
+          passed = sum(int(n) for n in re.findall(r"Passed:\s*(\d+)", log))
+          summary = f"test assemblies reporting totals: {len(totals)}, total={sum(totals)}, passed={passed}, failed={failed}"
+          print(summary)
+          pathlib.Path("ci-artifacts/ci-log.txt").open("a").write("\nASSERTION: " + summary + "\n")
+          if sum(totals) == 0:
+              print("::error::No tests were discovered. A green build with zero tests proves nothing.")
+              sys.exit(1)
+          if failed:
+              sys.exit(1)
+
+      - name: Check EF Core model snapshot drift
+        continue-on-error: true
+        run: |
+          dotnet tool install --global dotnet-ef --version 10.0.12 2>&1 | tee -a ci-artifacts/ci-log.txt
+          export PATH="$PATH:$HOME/.dotnet/tools"
+          echo "--- dotnet ef migrations has-pending-model-changes ---" | tee -a ci-artifacts/ci-log.txt
+          dotnet ef migrations has-pending-model-changes \
+            --project src/ChessAtlas.Infrastructure \
+            --startup-project src/ChessAtlas.Infrastructure \
+            --no-build -c Release 2>&1 | tee -a ci-artifacts/ci-log.txt || true
+          echo "(exit code $? - a non-zero result means the checked-in snapshot no longer matches the model;" | tee -a ci-artifacts/ci-log.txt
+          echo " run the generate-migrations workflow to refresh it.)" | tee -a ci-artifacts/ci-log.txt
+
+      - name: Publish the log back into the branch
+        if: always()
+        shell: bash
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          mkdir -p ci-artifacts
+          : >> ci-artifacts/ci-log.txt
+          git config user.name  "chessatlas-ci[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ci-artifacts/ci-log.txt
+          if git diff --cached --quiet; then
+            echo "Log unchanged."
+            exit 0
+          fi
+          git commit -m "ci: publish build log [skip ci]"
+          # The branch may have moved (e.g. a concurrent [skip ci] commit); rebase rather than fail.
+          git pull --rebase origin "${GITHUB_REF#refs/heads/}" || git rebase --abort
+          git push origin HEAD:"${GITHUB_REF#refs/heads/}"

@@ -113,11 +113,19 @@ public sealed class OpeningLine
         var sequence = MoveSequence.FromSan(sanText, fen);
         var timestamp = now ?? DateTimeOffset.UtcNow;
 
-        if (kind == OpeningLineKind.Trap && string.IsNullOrWhiteSpace(rationale))
+        // A trap is a claim that a specific move loses. When a person makes that claim they have to
+        // say why; recording a bad move as a "known trap" with no explanation is precisely the false
+        // certainty this model exists to prevent. A name copied from an upstream catalogue is a
+        // different, weaker statement - "this source calls it a trap" - and is allowed through with
+        // KindOrigin = UpstreamName, which the UI renders as unverified rather than as fact.
+        if (kind == OpeningLineKind.Trap &&
+            kindOrigin == ClassificationOrigin.Editorial &&
+            string.IsNullOrWhiteSpace(rationale))
+        {
             throw new ArgumentException(
-                "A trap needs a rationale. Recording a bad move as a 'known trap' without saying why " +
-                "it loses is exactly the false claim this model is meant to prevent.",
+                "Asserting a trap editorially requires a rationale explaining why the line loses.",
                 nameof(rationale));
+        }
 
         return new OpeningLine
         {
@@ -148,7 +156,9 @@ public sealed class OpeningLine
     public void Reclassify(OpeningLineKind kind, string? rationale = null, TrapVictim victim = TrapVictim.NotApplicable)
     {
         if (kind == OpeningLineKind.Trap && string.IsNullOrWhiteSpace(rationale))
-            throw new ArgumentException("Reclassifying a line as a trap requires a rationale.", nameof(rationale));
+            throw new ArgumentException(
+                "Reclassifying a line as a trap is an editorial assertion and requires a rationale.",
+                nameof(rationale));
 
         Kind = kind;
         KindOrigin = ClassificationOrigin.Editorial;

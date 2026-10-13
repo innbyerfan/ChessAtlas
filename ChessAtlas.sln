@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAtlas.Domain", "src/ChessAtlas.Domain/ChessAtlas.Domain.csproj", "{CFECF9ED-DC87-56A4-82B2-D2174F7CB2E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAtlas.Application", "src/ChessAtlas.Application/ChessAtlas.Application.csproj", "{F247A632-87AA-5960-9D4A-9FCD92181DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAtlas.Infrastructure", "src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj", "{B60F0E09-86DF-550B-B173-DD0161B9508C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAtlas.Domain.Tests", "tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj", "{38E4DB06-E1FE-5BAA-B154-3334903D1422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAtlas.Application.Tests", "tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj", "{E8963C74-AC48-53D5-A747-4F27AB881D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAtlas.Infrastructure.Tests", "tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj", "{2A4B458B-87CF-592D-97CB-4EF4907BB0A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFECF9ED-DC87-56A4-82B2-D2174F7CB2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFECF9ED-DC87-56A4-82B2-D2174F7CB2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFECF9ED-DC87-56A4-82B2-D2174F7CB2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFECF9ED-DC87-56A4-82B2-D2174F7CB2E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F247A632-87AA-5960-9D4A-9FCD92181DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F247A632-87AA-5960-9D4A-9FCD92181DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F247A632-87AA-5960-9D4A-9FCD92181DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F247A632-87AA-5960-9D4A-9FCD92181DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B60F0E09-86DF-550B-B173-DD0161B9508C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60F0E09-86DF-550B-B173-DD0161B9508C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60F0E09-86DF-550B-B173-DD0161B9508C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60F0E09-86DF-550B-B173-DD0161B9508C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E4DB06-E1FE-5BAA-B154-3334903D1422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E4DB06-E1FE-5BAA-B154-3334903D1422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E4DB06-E1FE-5BAA-B154-3334903D1422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E4DB06-E1FE-5BAA-B154-3334903D1422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8963C74-AC48-53D5-A747-4F27AB881D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8963C74-AC48-53D5-A747-4F27AB881D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8963C74-AC48-53D5-A747-4F27AB881D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8963C74-AC48-53D5-A747-4F27AB881D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4B458B-87CF-592D-97CB-4EF4907BB0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4B458B-87CF-592D-97CB-4EF4907BB0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4B458B-87CF-592D-97CB-4EF4907BB0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4B458B-87CF-592D-97CB-4EF4907BB0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
