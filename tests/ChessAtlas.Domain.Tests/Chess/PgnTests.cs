@@ -114,10 +114,13 @@ public sealed class PgnTests
 
         // The variation follows 2. Nf3, so it hangs off the third move of the main line.
         var variation = Assert.Single(game.Moves[2].Variations);
-        Assert.Equal(2, variation.Count);
+        Assert.Equal(3, variation.Count);
         Assert.Equal("Nc3", variation[0].San);
+        Assert.Equal("Nf6", variation[1].San);
+        Assert.Equal("Bc4", variation[2].San);
 
-        var nested = Assert.Single(variation[1].Variations);
+        // The nested variation follows 3. Bc4 inside the variation, i.e. the last move of it.
+        var nested = Assert.Single(variation[2].Variations);
         Assert.Equal("f4", Assert.Single(nested).San);
     }
 

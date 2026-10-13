@@ -89,7 +89,8 @@ public sealed class PositionTests
 
         Assert.DoesNotContain(Move.ParseUci("e1g1"), position.GenerateLegalMoves());
         Assert.DoesNotContain(Move.ParseUci("e1c1"), position.GenerateLegalMoves());
-        Assert.Contains(Move.ParseUci("e1d1"), position.GenerateLegalMoves());
+        // The king can still walk: e2 is empty and unattacked. (d1 and f1 hold our own pieces.)
+        Assert.Contains(Move.ParseUci("e1e2"), position.GenerateLegalMoves());
     }
 
     [Fact]

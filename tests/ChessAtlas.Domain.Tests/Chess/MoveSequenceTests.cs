@@ -86,7 +86,7 @@ public sealed class MoveSequenceTests
     {
         var line = MoveSequence.FromSan(
             "Nf3",
-            "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 0 2");
+            "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 2 2");
 
         Assert.Equal("2. Nf3", line.ToSanText());
 
