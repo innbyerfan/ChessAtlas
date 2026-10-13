@@ -1,0 +1,539 @@
+run: 38391383207  sha: e335af16e14b3229e434e4c608d91839f0b58ebf
+.NET SDK:
+ Version:           10.0.401
+ Commit:            e34a38d2ae
+ Workload version:  10.0.400-manifests.63b36e85
+ MSBuild version:   18.9.11+e34a38d2a
+
+Runtime Environment:
+ OS Name:     ubuntu
+ OS Version:  24.04
+ OS Platform: Linux
+ RID:         linux-x64
+ Base Path:   /usr/share/dotnet/sdk/10.0.401/
+
+.NET workloads installed:
+There are no installed workloads to display.
+Configured to use workload sets when installing new manifests.
+No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+
+Host:
+  Version:      10.0.12
+  Architecture: x64
+  Commit:       95017c711e
+
+.NET SDKs installed:
+  8.0.131 [/usr/share/dotnet/sdk]
+  8.0.206 [/usr/share/dotnet/sdk]
+  8.0.319 [/usr/share/dotnet/sdk]
+  8.0.425 [/usr/share/dotnet/sdk]
+  9.0.121 [/usr/share/dotnet/sdk]
+  9.0.205 [/usr/share/dotnet/sdk]
+  9.0.318 [/usr/share/dotnet/sdk]
+  10.0.112 [/usr/share/dotnet/sdk]
+  10.0.204 [/usr/share/dotnet/sdk]
+  10.0.303 [/usr/share/dotnet/sdk]
+  10.0.401 [/usr/share/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 8.0.6 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 8.0.22 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 8.0.31 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 9.0.6 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 9.0.20 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 10.0.8 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 10.0.11 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 10.0.12 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 8.0.6 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.22 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.31 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 9.0.6 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 9.0.20 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 10.0.8 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 10.0.11 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.NETCore.App 10.0.12 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  DOTNET_CLI_TELEMETRY_OPTOUT              [true]
+  DOTNET_MULTILEVEL_LOOKUP                 [0]
+  DOTNET_NOLOGO                            [true]
+  DOTNET_ROOT                              [/usr/share/dotnet]
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE        [1]
+
+global.json file:
+  /home/runner/work/ChessAtlas/ChessAtlas/global.json
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+You can invoke the tool using the following command: dotnet-ef
+Tool 'dotnet-ef' (version '10.0.12') was successfully installed.
+Entity Framework Core .NET Command-line Tools
+10.0.12
+  Determining projects to restore...
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj (in 98 ms).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/ChessAtlas.Application.csproj (in 975 ms).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj (in 1.85 sec).
+  ChessAtlas.Domain -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/bin/Release/net10.0/ChessAtlas.Domain.dll
+  ChessAtlas.Application -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/bin/Release/net10.0/ChessAtlas.Application.dll
+  ChessAtlas.Infrastructure -> /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Release/net10.0/ChessAtlas.Infrastructure.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.93
+Using project '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj'.
+Using startup project '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj'.
+dotnet msbuild /getProperty:ProjectName /getProperty:AssemblyName /getProperty:DesignAssembly /getProperty:Language /getProperty:OutputPath /getProperty:PlatformTarget /getProperty:ProjectAssetsFile /getProperty:ProjectDir /getProperty:RootNamespace /getProperty:RuntimeFrameworkVersion /getProperty:TargetFileName /getProperty:TargetFrameworkMoniker /getProperty:Nullable /getProperty:TargetFramework /getProperty:TargetPlatformIdentifier /getProperty:Platform /t:ResolvePackageAssets /getItem:RuntimeCopyLocalItems /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj
+dotnet msbuild /getProperty:ProjectName /getProperty:AssemblyName /getProperty:DesignAssembly /getProperty:Language /getProperty:OutputPath /getProperty:PlatformTarget /getProperty:ProjectAssetsFile /getProperty:ProjectDir /getProperty:RootNamespace /getProperty:RuntimeFrameworkVersion /getProperty:TargetFileName /getProperty:TargetFrameworkMoniker /getProperty:Nullable /getProperty:TargetFramework /getProperty:TargetPlatformIdentifier /getProperty:Platform /t:ResolvePackageAssets /getItem:RuntimeCopyLocalItems /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj
+Build started...
+dotnet build /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj /verbosity:quiet /nologo /p:PublishAot=false
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.92
+
+Build succeeded.
+dotnet exec --depsfile /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.deps.json --additionalprobingpath /home/runner/.nuget/packages --runtimeconfig /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.runtimeconfig.json /home/runner/.dotnet/tools/.store/dotnet-ef/10.0.12/dotnet-ef/10.0.12/tools/net8.0/any/tools/net8.0/any/ef.dll migrations add InitialSchema --context ChessAtlasDbContext --output-dir Persistence/Migrations --assembly /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.dll --project /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj --startup-assembly /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.dll --startup-project /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj --project-dir /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ --root-namespace ChessAtlas.Infrastructure --language C# --framework net10.0 --design-assembly /home/runner/.nuget/packages/microsoft.entityframeworkcore.design/10.0.12/lib/net10.0/Microsoft.EntityFrameworkCore.Design.dll --nullable --working-dir /home/runner/work/ChessAtlas/ChessAtlas --verbose
+Using assembly 'ChessAtlas.Infrastructure'.
+Using startup assembly 'ChessAtlas.Infrastructure'.
+Using application base '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0'.
+Using working directory '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure'.
+Using root namespace 'ChessAtlas.Infrastructure'.
+Using project directory '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Found IDesignTimeDbContextFactory implementation 'DesignTimeDbContextFactory'.
+Found DbContext 'ChessAtlasDbContext'.
+Finding DbContext classes in the project...
+Using DbContext factory 'DesignTimeDbContextFactory'.
+Using context 'ChessAtlasDbContext'.
+Finding design-time services referenced by assembly 'ChessAtlas.Infrastructure'...
+Finding design-time services referenced by assembly 'ChessAtlas.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.Sqlite'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.Sqlite'.
+Finding IDesignTimeServices implementations in assembly 'ChessAtlas.Infrastructure'...
+No design-time services were found.
+Writing migration to '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/Persistence/Migrations/20261013113703_InitialSchema.cs'.
+Writing model snapshot to '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/Persistence/Migrations/ChessAtlasDbContextModelSnapshot.cs'.
+'ChessAtlasDbContext' disposed.
+Done. To undo this action, use 'ef migrations remove'
+--- generated files ---
+total 44
+drwxr-xr-x 2 runner runner  4096 Oct 13 11:37 .
+drwxr-xr-x 4 runner runner  4096 Oct 13 11:37 ..
+-rw-r--r-- 1 runner runner 10376 Oct 13 11:37 20261013113703_InitialSchema.Designer.cs
+-rw-r--r-- 1 runner runner 10863 Oct 13 11:37 20261013113703_InitialSchema.cs
+-rw-r--r-- 1 runner runner 10282 Oct 13 11:37 ChessAtlasDbContextModelSnapshot.cs
+Using project '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj'.
+Using startup project '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj'.
+dotnet msbuild /getProperty:ProjectName /getProperty:AssemblyName /getProperty:DesignAssembly /getProperty:Language /getProperty:OutputPath /getProperty:PlatformTarget /getProperty:ProjectAssetsFile /getProperty:ProjectDir /getProperty:RootNamespace /getProperty:RuntimeFrameworkVersion /getProperty:TargetFileName /getProperty:TargetFrameworkMoniker /getProperty:Nullable /getProperty:TargetFramework /getProperty:TargetPlatformIdentifier /getProperty:Platform /t:ResolvePackageAssets /getItem:RuntimeCopyLocalItems /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj
+dotnet msbuild /getProperty:ProjectName /getProperty:AssemblyName /getProperty:DesignAssembly /getProperty:Language /getProperty:OutputPath /getProperty:PlatformTarget /getProperty:ProjectAssetsFile /getProperty:ProjectDir /getProperty:RootNamespace /getProperty:RuntimeFrameworkVersion /getProperty:TargetFileName /getProperty:TargetFrameworkMoniker /getProperty:Nullable /getProperty:TargetFramework /getProperty:TargetPlatformIdentifier /getProperty:Platform /t:ResolvePackageAssets /getItem:RuntimeCopyLocalItems /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj
+Build started...
+dotnet build /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj /verbosity:quiet /nologo /p:PublishAot=false
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.15
+
+Build succeeded.
+dotnet exec --depsfile /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.deps.json --additionalprobingpath /home/runner/.nuget/packages --runtimeconfig /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.runtimeconfig.json /home/runner/.dotnet/tools/.store/dotnet-ef/10.0.12/dotnet-ef/10.0.12/tools/net8.0/any/tools/net8.0/any/ef.dll database update --context ChessAtlasDbContext --connection "Data Source=/tmp/chessatlas-migration-check.db" --assembly /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.dll --project /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj --startup-assembly /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0/ChessAtlas.Infrastructure.dll --startup-project /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj --project-dir /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ --root-namespace ChessAtlas.Infrastructure --language C# --framework net10.0 --design-assembly /home/runner/.nuget/packages/microsoft.entityframeworkcore.design/10.0.12/lib/net10.0/Microsoft.EntityFrameworkCore.Design.dll --nullable --working-dir /home/runner/work/ChessAtlas/ChessAtlas --verbose
+Using assembly 'ChessAtlas.Infrastructure'.
+Using startup assembly 'ChessAtlas.Infrastructure'.
+Using application base '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/bin/Debug/net10.0'.
+Using working directory '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure'.
+Using root namespace 'ChessAtlas.Infrastructure'.
+Using project directory '/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Found IDesignTimeDbContextFactory implementation 'DesignTimeDbContextFactory'.
+Found DbContext 'ChessAtlasDbContext'.
+Finding DbContext classes in the project...
+Using DbContext factory 'DesignTimeDbContextFactory'.
+Using context 'ChessAtlasDbContext'.
+Finding design-time services referenced by assembly 'ChessAtlas.Infrastructure'...
+Finding design-time services referenced by assembly 'ChessAtlas.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.Sqlite'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.Sqlite'.
+Finding IDesignTimeServices implementations in assembly 'ChessAtlas.Infrastructure'...
+No design-time services were found.
+Creating DbConnection.
+Created DbConnection. (15ms).
+Migrating using database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Creating DbConnection.
+Created DbConnection. (0ms).
+Opening connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+An error occurred using the connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Disposing connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Disposed connection to database 'main' on server '/tmp/chessatlas-migration-check.db' (0ms).
+Opening connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Opened connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (3ms).
+Initialized DbCommand for 'ExecuteNonQuery' (6ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+Closing connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Closed connection to database 'main' on server '/tmp/chessatlas-migration-check.db' (1ms).
+Opening connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Opened connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-10-13 11:37:08.4282127+00:00');
+SELECT changes();
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-10-13 11:37:08.4282127+00:00');
+SELECT changes();
+Beginning transaction with isolation level 'Unspecified'.
+Began transaction with isolation level 'Serializable'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+Committing transaction.
+Committed transaction.
+Disposing transaction.
+Beginning transaction with isolation level 'Unspecified'.
+Began transaction with isolation level 'Serializable'.
+Creating DbConnection.
+Created DbConnection. (0ms).
+Opening connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Opened connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Disposing connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Disposed connection to database 'main' on server '/tmp/chessatlas-migration-check.db' (0ms).
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+Closing data reader to 'main' on server '/tmp/chessatlas-migration-check.db'.
+A data reader for 'main' on server '/tmp/chessatlas-migration-check.db' is being disposed after spending 1ms reading results.
+Applying migration '20261013113703_InitialSchema'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "DataProvenances" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_DataProvenances" PRIMARY KEY AUTOINCREMENT,
+    "Provider" TEXT NOT NULL,
+    "Uri" TEXT NOT NULL,
+    "License" TEXT NOT NULL,
+    "VersionOrCommit" TEXT NULL,
+    "Checksum" TEXT NULL,
+    "RetrievedAt" TEXT NOT NULL,
+    "RedistributionAllowed" INTEGER NOT NULL,
+    "Notes" TEXT NULL
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "DataProvenances" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_DataProvenances" PRIMARY KEY AUTOINCREMENT,
+    "Provider" TEXT NOT NULL,
+    "Uri" TEXT NOT NULL,
+    "License" TEXT NOT NULL,
+    "VersionOrCommit" TEXT NULL,
+    "Checksum" TEXT NULL,
+    "RetrievedAt" TEXT NOT NULL,
+    "RedistributionAllowed" INTEGER NOT NULL,
+    "Notes" TEXT NULL
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "Openings" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Openings" PRIMARY KEY AUTOINCREMENT,
+    "CanonicalName" TEXT NOT NULL,
+    "TerminalName" TEXT NOT NULL,
+    "FamilyKey" TEXT NOT NULL,
+    "Depth" INTEGER NOT NULL,
+    "EcoCodeValue" TEXT NULL,
+    "Description" TEXT NULL,
+    "Difficulty" INTEGER NOT NULL,
+    "ParentOpeningId" INTEGER NULL,
+    "CreatedAtUtc" TEXT NOT NULL,
+    "UpdatedAtUtc" TEXT NOT NULL,
+    CONSTRAINT "FK_Openings_Openings_ParentOpeningId" FOREIGN KEY ("ParentOpeningId") REFERENCES "Openings" ("Id") ON DELETE RESTRICT
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "Openings" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Openings" PRIMARY KEY AUTOINCREMENT,
+    "CanonicalName" TEXT NOT NULL,
+    "TerminalName" TEXT NOT NULL,
+    "FamilyKey" TEXT NOT NULL,
+    "Depth" INTEGER NOT NULL,
+    "EcoCodeValue" TEXT NULL,
+    "Description" TEXT NULL,
+    "Difficulty" INTEGER NOT NULL,
+    "ParentOpeningId" INTEGER NULL,
+    "CreatedAtUtc" TEXT NOT NULL,
+    "UpdatedAtUtc" TEXT NOT NULL,
+    CONSTRAINT "FK_Openings_Openings_ParentOpeningId" FOREIGN KEY ("ParentOpeningId") REFERENCES "Openings" ("Id") ON DELETE RESTRICT
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "OpeningAliases" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_OpeningAliases" PRIMARY KEY AUTOINCREMENT,
+    "OpeningId" INTEGER NOT NULL,
+    "Alias" TEXT NOT NULL,
+    "Language" TEXT NULL,
+    CONSTRAINT "FK_OpeningAliases_Openings_OpeningId" FOREIGN KEY ("OpeningId") REFERENCES "Openings" ("Id") ON DELETE CASCADE
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "OpeningAliases" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_OpeningAliases" PRIMARY KEY AUTOINCREMENT,
+    "OpeningId" INTEGER NOT NULL,
+    "Alias" TEXT NOT NULL,
+    "Language" TEXT NULL,
+    CONSTRAINT "FK_OpeningAliases_Openings_OpeningId" FOREIGN KEY ("OpeningId") REFERENCES "Openings" ("Id") ON DELETE CASCADE
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "OpeningLines" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_OpeningLines" PRIMARY KEY AUTOINCREMENT,
+    "OpeningId" INTEGER NOT NULL,
+    "ParentLineId" INTEGER NULL,
+    "Name" TEXT NOT NULL,
+    "EcoCodeValue" TEXT NULL,
+    "StartingFen" TEXT NOT NULL,
+    "SanText" TEXT NOT NULL,
+    "UciText" TEXT NOT NULL,
+    "PlyCount" INTEGER NOT NULL,
+    "TerminalPositionKey" TEXT NOT NULL,
+    "Kind" INTEGER NOT NULL,
+    "KindOrigin" INTEGER NOT NULL,
+    "VerificationStatus" INTEGER NOT NULL,
+    "Difficulty" INTEGER NOT NULL,
+    "Victim" INTEGER NOT NULL,
+    "Rationale" TEXT NULL,
+    "Notes" TEXT NULL,
+    "ProvenanceId" INTEGER NULL,
+    "CreatedAtUtc" TEXT NOT NULL,
+    "UpdatedAtUtc" TEXT NOT NULL,
+    CONSTRAINT "FK_OpeningLines_DataProvenances_ProvenanceId" FOREIGN KEY ("ProvenanceId") REFERENCES "DataProvenances" ("Id") ON DELETE SET NULL,
+    CONSTRAINT "FK_OpeningLines_OpeningLines_ParentLineId" FOREIGN KEY ("ParentLineId") REFERENCES "OpeningLines" ("Id") ON DELETE RESTRICT,
+    CONSTRAINT "FK_OpeningLines_Openings_OpeningId" FOREIGN KEY ("OpeningId") REFERENCES "Openings" ("Id") ON DELETE CASCADE
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "OpeningLines" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_OpeningLines" PRIMARY KEY AUTOINCREMENT,
+    "OpeningId" INTEGER NOT NULL,
+    "ParentLineId" INTEGER NULL,
+    "Name" TEXT NOT NULL,
+    "EcoCodeValue" TEXT NULL,
+    "StartingFen" TEXT NOT NULL,
+    "SanText" TEXT NOT NULL,
+    "UciText" TEXT NOT NULL,
+    "PlyCount" INTEGER NOT NULL,
+    "TerminalPositionKey" TEXT NOT NULL,
+    "Kind" INTEGER NOT NULL,
+    "KindOrigin" INTEGER NOT NULL,
+    "VerificationStatus" INTEGER NOT NULL,
+    "Difficulty" INTEGER NOT NULL,
+    "Victim" INTEGER NOT NULL,
+    "Rationale" TEXT NULL,
+    "Notes" TEXT NULL,
+    "ProvenanceId" INTEGER NULL,
+    "CreatedAtUtc" TEXT NOT NULL,
+    "UpdatedAtUtc" TEXT NOT NULL,
+    CONSTRAINT "FK_OpeningLines_DataProvenances_ProvenanceId" FOREIGN KEY ("ProvenanceId") REFERENCES "DataProvenances" ("Id") ON DELETE SET NULL,
+    CONSTRAINT "FK_OpeningLines_OpeningLines_ParentLineId" FOREIGN KEY ("ParentLineId") REFERENCES "OpeningLines" ("Id") ON DELETE RESTRICT,
+    CONSTRAINT "FK_OpeningLines_Openings_OpeningId" FOREIGN KEY ("OpeningId") REFERENCES "Openings" ("Id") ON DELETE CASCADE
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_DataProvenances_Provider_VersionOrCommit" ON "DataProvenances" ("Provider", "VersionOrCommit");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_DataProvenances_Provider_VersionOrCommit" ON "DataProvenances" ("Provider", "VersionOrCommit");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningAliases_Alias" ON "OpeningAliases" ("Alias");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningAliases_Alias" ON "OpeningAliases" ("Alias");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_OpeningAliases_OpeningId_Alias_Language" ON "OpeningAliases" ("OpeningId", "Alias", "Language");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_OpeningAliases_OpeningId_Alias_Language" ON "OpeningAliases" ("OpeningId", "Alias", "Language");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_EcoCodeValue" ON "OpeningLines" ("EcoCodeValue");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_EcoCodeValue" ON "OpeningLines" ("EcoCodeValue");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_Kind" ON "OpeningLines" ("Kind");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_Kind" ON "OpeningLines" ("Kind");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_OpeningLines_OpeningId_StartingFen_UciText" ON "OpeningLines" ("OpeningId", "StartingFen", "UciText");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_OpeningLines_OpeningId_StartingFen_UciText" ON "OpeningLines" ("OpeningId", "StartingFen", "UciText");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_ParentLineId" ON "OpeningLines" ("ParentLineId");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_ParentLineId" ON "OpeningLines" ("ParentLineId");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_ProvenanceId" ON "OpeningLines" ("ProvenanceId");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_ProvenanceId" ON "OpeningLines" ("ProvenanceId");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_TerminalPositionKey" ON "OpeningLines" ("TerminalPositionKey");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_TerminalPositionKey" ON "OpeningLines" ("TerminalPositionKey");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_VerificationStatus" ON "OpeningLines" ("VerificationStatus");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_OpeningLines_VerificationStatus" ON "OpeningLines" ("VerificationStatus");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Openings_CanonicalName" ON "Openings" ("CanonicalName");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Openings_CanonicalName" ON "Openings" ("CanonicalName");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_Depth" ON "Openings" ("Depth");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_Depth" ON "Openings" ("Depth");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_EcoCodeValue" ON "Openings" ("EcoCodeValue");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_EcoCodeValue" ON "Openings" ("EcoCodeValue");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_FamilyKey" ON "Openings" ("FamilyKey");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_FamilyKey" ON "Openings" ("FamilyKey");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_ParentOpeningId" ON "Openings" ("ParentOpeningId");
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Openings_ParentOpeningId" ON "Openings" ("ParentOpeningId");
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20261013113703_InitialSchema', '10.0.12');
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20261013113703_InitialSchema', '10.0.12');
+Committing transaction.
+Committed transaction.
+Disposing transaction.
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+Closing connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Closed connection to database 'main' on server '/tmp/chessatlas-migration-check.db' (0ms).
+'ChessAtlasDbContext' disposed.
+Disposing connection to database 'main' on server '/tmp/chessatlas-migration-check.db'.
+Disposed connection to database 'main' on server '/tmp/chessatlas-migration-check.db' (0ms).
+Done.
+Migration applied cleanly to a fresh SQLite database.

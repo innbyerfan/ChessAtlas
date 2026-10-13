@@ -1,0 +1,44 @@
+## Build output
+bin/
+obj/
+out/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+publish/
+
+## Test and coverage
+TestResults/
+*.trx
+*.coverage
+coverage*.json
+coverage*.xml
+
+## IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Local application state — databases, downloaded engines, logs.
+## Never committed: these are per-machine and can contain the user's own games and tokens.
+*.chessatlas.db
+*.chessatlas.db-shm
+*.chessatlas.db-wal
+local/
+logs/
+*.log
+
+## EF Core design-time scratch database
+chessatlas-designtime.db*
+
+## Downloaded datasets and engines are fetched on demand, not vendored.
+## (data/openings/lichess-chess-openings IS committed: 404 KB, CC0, see its SOURCE.md.)
+data/downloads/
+data/engines/

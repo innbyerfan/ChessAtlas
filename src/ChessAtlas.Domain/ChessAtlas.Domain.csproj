@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    The domain has no package references at all. That is not an oversight and not a starting point
+    that will erode: chess rules, FEN/SAN/PGN, the opening model and the scheduler are all pure, and
+    keeping this project dependency-free is what makes the rules engine testable without a database,
+    a UI toolkit or a network.
+  -->
+
+  <PropertyGroup>
+    <RootNamespace>ChessAtlas.Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>

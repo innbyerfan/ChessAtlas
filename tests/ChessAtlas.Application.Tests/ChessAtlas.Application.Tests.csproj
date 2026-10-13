@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>ChessAtlas.Application.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <!--
+      xUnit1051 asks every CancellationToken-accepting call to pass TestContext.Current.CancellationToken.
+      These tests exercise cancellation explicitly where it matters (see the cancellation tests) and
+      use the default token everywhere else on purpose, so the rule is noise here. Suppressed rather
+      than deleted from the analyser set, so it can be turned back on per file.
+    -->
+    <NoWarn>$(NoWarn);xUnit1051</NoWarn>
+    <!-- xunit v3 runs as its own executable under Microsoft.Testing.Platform. -->
+    <OutputType>Exe</OutputType>
+    <!-- xunit.v3 generates the entry point; the test SDK must not add a second one. -->
+    <GenerateProgramFile>false</GenerateProgramFile>
+    <!-- .NET 10 no longer runs Microsoft.Testing.Platform through the VSTest target. -->
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ChessAtlas.Application\ChessAtlas.Application.csproj" />
+    <ProjectReference Include="..\..\src\ChessAtlas.Infrastructure\ChessAtlas.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

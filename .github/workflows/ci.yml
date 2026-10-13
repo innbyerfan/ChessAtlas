@@ -1,0 +1,126 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "arena/**"
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "true"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+          cache: false
+
+      - name: Prepare
+        run: |
+          mkdir -p ci-artifacts
+          # ci-artifacts/ci-log.txt is committed, so it would otherwise grow without bound and mix
+          # this run's output with previous runs'. Start every run from an empty file.
+          : > ci-artifacts/ci-log.txt
+
+      - name: Restore
+        run: dotnet restore ChessAtlas.sln 2>&1 | tee -a ci-artifacts/ci-log.txt
+
+      - name: Build (warnings are errors here)
+        run: |
+          dotnet build ChessAtlas.sln --no-restore -c Release \
+            /p:TreatWarningsAsErrors=true \
+            2>&1 | tee -a ci-artifacts/ci-log.txt
+
+      - name: Test
+        run: |
+          # Run each test project's own executable. `dotnet test` still routes through the VSTest
+          # target, which Microsoft.Testing.Platform refuses on the .NET 10 SDK; xunit.v3 projects
+          # are executables, so invoking them directly is both supported and faster.
+          status=0
+          for proj in tests/ChessAtlas.Domain.Tests tests/ChessAtlas.Application.Tests tests/ChessAtlas.Infrastructure.Tests; do
+            echo "===== $proj =====" | tee -a ci-artifacts/ci-log.txt
+            dotnet run --project "$proj" -c Release --no-build 2>&1 | tee -a ci-artifacts/ci-log.txt || status=1
+          done
+          exit $status
+
+      - name: Assert tests actually ran
+        shell: python
+        run: |
+          import re, sys, pathlib
+          log = pathlib.Path("ci-artifacts/ci-log.txt").read_text(errors="replace")
+
+          # xunit.v3's in-process runner summarises one assembly per line as
+          #   ChessAtlas.Domain.Tests  Total: 183, Errors: 0, Failed: 11, Skipped: 0, Not Run: 0
+          # It prints no "Passed:" count, so passing is derived rather than grepped. Anchoring on
+          # "Total:" keeps the numbers tied to the summary lines and out of incidental log prose.
+          rows = re.findall(
+              r"(?i)\btotal:\s*(\d+),\s*errors:\s*(\d+),\s*failed:\s*(\d+),\s*skipped:\s*(\d+)",
+              log)
+
+          total = sum(int(r[0]) for r in rows)
+          errors = sum(int(r[1]) for r in rows)
+          failed = sum(int(r[2]) for r in rows)
+          skipped = sum(int(r[3]) for r in rows)
+          passed = total - failed - skipped - errors
+
+          summary = (f"assemblies: {len(rows)}, total={total}, passed={passed}, "
+                     f"failed={failed}, errors={errors}, skipped={skipped}")
+          print(summary)
+          pathlib.Path("ci-artifacts/ci-log.txt").open("a").write("\nASSERTION: " + summary + "\n")
+
+          if len(rows) == 0 or total == 0:
+              print("::error::No tests were discovered. A green build with zero tests proves nothing.")
+              sys.exit(1)
+          if failed or errors:
+              print(f"::error::{failed} test(s) failed and {errors} errored.")
+              sys.exit(1)
+          print(f"All {passed} test(s) passed.")
+
+      - name: Check EF Core model snapshot drift
+        if: always()
+        continue-on-error: true
+        run: |
+          dotnet tool install --global dotnet-ef --version 10.0.12 2>&1 | tee -a ci-artifacts/ci-log.txt
+          export PATH="$PATH:$HOME/.dotnet/tools"
+          echo "--- dotnet ef migrations has-pending-model-changes ---" | tee -a ci-artifacts/ci-log.txt
+          dotnet ef migrations has-pending-model-changes \
+            --project src/ChessAtlas.Infrastructure \
+            --startup-project src/ChessAtlas.Infrastructure \
+            --no-build -c Release 2>&1 | tee -a ci-artifacts/ci-log.txt || true
+          echo "(exit code $? - a non-zero result means the checked-in snapshot no longer matches the model;" | tee -a ci-artifacts/ci-log.txt
+          echo " run the generate-migrations workflow to refresh it.)" | tee -a ci-artifacts/ci-log.txt
+
+      - name: Publish the log back into the branch
+        if: always()
+        shell: bash
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          mkdir -p ci-artifacts
+          : >> ci-artifacts/ci-log.txt
+          git config user.name  "chessatlas-ci[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ci-artifacts/ci-log.txt
+          if git diff --cached --quiet; then
+            echo "Log unchanged."
+            exit 0
+          fi
+          git commit -m "ci: publish build log [skip ci]"
+          # The branch may have moved (e.g. a concurrent [skip ci] commit); rebase rather than fail.
+          git pull --rebase origin "${GITHUB_REF#refs/heads/}" || git rebase --abort
+          git push origin HEAD:"${GITHUB_REF#refs/heads/}"

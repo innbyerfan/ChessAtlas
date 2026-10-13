@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>ChessAtlas.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChessAtlas.Domain\ChessAtlas.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Only the logging abstraction. Use cases must not know about EF Core, Avalonia or Serilog. -->
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+</Project>

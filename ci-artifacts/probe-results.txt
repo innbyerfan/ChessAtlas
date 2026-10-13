@@ -1,0 +1,274 @@
+# probe-packages round 3 - 2026-10-13T10:36:25Z
+
+dotnet --version: 10.0.401
+
+--- new ProbeA ---
+Restore succeeded.
+
+
+--- add Microsoft.EntityFrameworkCore.Sqlite * ---
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 1.78 sec).
+--- add Microsoft.EntityFrameworkCore.Design * ---
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 1.55 sec).
+--- add Microsoft.EntityFrameworkCore.Relational * ---
+info : Package 'Microsoft.EntityFrameworkCore.Relational' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Microsoft.EntityFrameworkCore.Relational' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 422 ms).
+--- add Microsoft.Data.Sqlite * ---
+info : Package 'Microsoft.Data.Sqlite' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Microsoft.Data.Sqlite' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 419 ms).
+--- add Microsoft.Extensions.Hosting * ---
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 650 ms).
+--- add Microsoft.Extensions.Http * ---
+info : Package 'Microsoft.Extensions.Http' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Microsoft.Extensions.Http' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 433 ms).
+--- add Microsoft.Extensions.Logging * ---
+info : Package 'Microsoft.Extensions.Logging' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Microsoft.Extensions.Logging' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 238 ms).
+--- add Microsoft.Extensions.Configuration.Json * ---
+info : Package 'Microsoft.Extensions.Configuration.Json' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Microsoft.Extensions.Configuration.Json' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 238 ms).
+--- add CommunityToolkit.Mvvm * ---
+info : PackageReference for package 'CommunityToolkit.Mvvm' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 444 ms).
+--- add Serilog * ---
+info : PackageReference for package 'Serilog' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 453 ms).
+--- add Serilog.Sinks.File * ---
+info : Package 'Serilog.Sinks.File' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Serilog.Sinks.File' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 410 ms).
+--- add Serilog.Sinks.Console * ---
+info : Package 'Serilog.Sinks.Console' is compatible with all the specified frameworks in project '/tmp/probe/a/ProbeA.csproj'.
+info : PackageReference for package 'Serilog.Sinks.Console' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 427 ms).
+--- add Serilog.Extensions.Hosting * ---
+info : PackageReference for package 'Serilog.Extensions.Hosting' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 480 ms).
+--- add Serilog.Settings.Configuration * ---
+info : PackageReference for package 'Serilog.Settings.Configuration' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 448 ms).
+--- add xunit * ---
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 522 ms).
+--- add xunit.runner.visualstudio * ---
+info : PackageReference for package 'xunit.runner.visualstudio' version '*' added to file '/tmp/probe/a/ProbeA.csproj'.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.props.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 441 ms).
+--- add Microsoft.NET.Test.Sdk * ---
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/a/obj/ProbeA.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/a/obj/project.assets.json
+log  : Restored /tmp/probe/a/ProbeA.csproj (in 672 ms).
+--- restore /tmp/probe/a ---
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+### Group A - shipped stack
+  CommunityToolkit.Mvvm                      requested=*            resolved=8.4.2
+  Microsoft.Data.Sqlite                      requested=*            resolved=10.0.12
+  Microsoft.EntityFrameworkCore.Design       requested=*            resolved=10.0.12
+  Microsoft.EntityFrameworkCore.Relational   requested=*            resolved=10.0.12
+  Microsoft.EntityFrameworkCore.Sqlite       requested=*            resolved=10.0.12
+  Microsoft.Extensions.Configuration.Json    requested=*            resolved=10.0.12
+  Microsoft.Extensions.Hosting               requested=*            resolved=10.0.12
+  Microsoft.Extensions.Http                  requested=*            resolved=10.0.12
+  Microsoft.Extensions.Logging               requested=*            resolved=10.0.12
+  Microsoft.NET.Test.Sdk                     requested=*            resolved=18.10.1
+  Serilog                                    requested=*            resolved=4.4.0
+  Serilog.Extensions.Hosting                 requested=*            resolved=10.0.0
+  Serilog.Settings.Configuration             requested=*            resolved=10.0.1
+  Serilog.Sinks.Console                      requested=*            resolved=6.1.1
+  Serilog.Sinks.File                         requested=*            resolved=7.0.0
+  xunit                                      requested=*            resolved=2.9.3
+  xunit.runner.visualstudio                  requested=*            resolved=4.0.1
+
+--- new ProbeB ---
+Restore succeeded.
+
+
+--- add Avalonia 11.3.* ---
+info : Generating MSBuild file /tmp/probe/b/obj/ProbeB.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/b/obj/ProbeB.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 679 ms).
+--- add Avalonia.Desktop 11.3.* ---
+info : Generating MSBuild file /tmp/probe/b/obj/ProbeB.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/b/obj/ProbeB.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 2.85 sec).
+--- add Avalonia.Themes.Fluent 11.3.* ---
+info : Package 'Avalonia.Themes.Fluent' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Themes.Fluent' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 403 ms).
+--- add Avalonia.Themes.Simple 11.3.* ---
+info : Package 'Avalonia.Themes.Simple' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Themes.Simple' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 516 ms).
+--- add Avalonia.Fonts.Inter 11.3.* ---
+info : Package 'Avalonia.Fonts.Inter' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Fonts.Inter' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 542 ms).
+--- add Avalonia.Diagnostics 11.3.* ---
+info : Package 'Avalonia.Diagnostics' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Diagnostics' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 436 ms).
+--- add Avalonia.Headless 11.3.* ---
+info : Package 'Avalonia.Headless' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Headless' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 391 ms).
+--- add Avalonia.Headless.XUnit 11.3.* ---
+info : Package 'Avalonia.Headless.XUnit' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Headless.XUnit' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 424 ms).
+--- add Avalonia.Controls.DataGrid 11.3.* ---
+info : Package 'Avalonia.Controls.DataGrid' is compatible with all the specified frameworks in project '/tmp/probe/b/ProbeB.csproj'.
+info : PackageReference for package 'Avalonia.Controls.DataGrid' version '11.3.*' added to file '/tmp/probe/b/ProbeB.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/b/obj/project.assets.json
+log  : Restored /tmp/probe/b/ProbeB.csproj (in 455 ms).
+--- restore /tmp/probe/b ---
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+### Group B - Avalonia 11.3 line
+  Avalonia                                   requested=11.3.*       resolved=11.3.22
+  Avalonia.Controls.DataGrid                 requested=11.3.*       resolved=11.3.13
+  Avalonia.Desktop                           requested=11.3.*       resolved=11.3.22
+  Avalonia.Diagnostics                       requested=11.3.*       resolved=11.3.22
+  Avalonia.Fonts.Inter                       requested=11.3.*       resolved=11.3.22
+  Avalonia.Headless                          requested=11.3.*       resolved=11.3.22
+  Avalonia.Headless.XUnit                    requested=11.3.*       resolved=11.3.22
+  Avalonia.Themes.Fluent                     requested=11.3.*       resolved=11.3.22
+  Avalonia.Themes.Simple                     requested=11.3.*       resolved=11.3.22
+
+--- new ProbeC ---
+Restore succeeded.
+
+
+--- add Avalonia * ---
+info : Generating MSBuild file /tmp/probe/c/obj/ProbeC.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/c/obj/ProbeC.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/c/obj/project.assets.json
+log  : Restored /tmp/probe/c/ProbeC.csproj (in 528 ms).
+--- add Avalonia.Desktop * ---
+info : Generating MSBuild file /tmp/probe/c/obj/ProbeC.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/c/obj/ProbeC.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/c/obj/project.assets.json
+log  : Restored /tmp/probe/c/ProbeC.csproj (in 3.93 sec).
+--- add Avalonia.Themes.Fluent * ---
+info : Package 'Avalonia.Themes.Fluent' is compatible with all the specified frameworks in project '/tmp/probe/c/ProbeC.csproj'.
+info : PackageReference for package 'Avalonia.Themes.Fluent' version '*' added to file '/tmp/probe/c/ProbeC.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/c/obj/project.assets.json
+log  : Restored /tmp/probe/c/ProbeC.csproj (in 382 ms).
+--- restore /tmp/probe/c ---
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+### Group C - Avalonia latest major
+  Avalonia                                   requested=*            resolved=12.1.4
+  Avalonia.Desktop                           requested=*            resolved=12.1.4
+  Avalonia.Themes.Fluent                     requested=*            resolved=12.1.4
+
+--- new ProbeD ---
+Restore succeeded.
+
+
+--- add xunit.v3 * ---
+info : Generating MSBuild file /tmp/probe/d/obj/ProbeD.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/d/obj/ProbeD.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/d/obj/project.assets.json
+log  : Restored /tmp/probe/d/ProbeD.csproj (in 629 ms).
+--- add xunit.runner.visualstudio * ---
+info : PackageReference for package 'xunit.runner.visualstudio' version '*' added to file '/tmp/probe/d/ProbeD.csproj'.
+info : Generating MSBuild file /tmp/probe/d/obj/ProbeD.csproj.nuget.g.props.
+info : Writing assets file to disk. Path: /tmp/probe/d/obj/project.assets.json
+log  : Restored /tmp/probe/d/ProbeD.csproj (in 201 ms).
+--- add Microsoft.NET.Test.Sdk * ---
+info : Generating MSBuild file /tmp/probe/d/obj/ProbeD.csproj.nuget.g.props.
+info : Generating MSBuild file /tmp/probe/d/obj/ProbeD.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: /tmp/probe/d/obj/project.assets.json
+log  : Restored /tmp/probe/d/ProbeD.csproj (in 215 ms).
+--- restore /tmp/probe/d ---
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+### Group D - xunit v3
+  Microsoft.NET.Test.Sdk                     requested=*            resolved=18.10.1
+  xunit.runner.visualstudio                  requested=*            resolved=4.0.1
+  xunit.v3                                   requested=*            resolved=4.0.2
+
+--- new ProbeE ---
+Restore succeeded.
+
+
+--- add ChessDotNet * ---
+info : Package 'ChessDotNet' is compatible with all the specified frameworks in project '/tmp/probe/e/ProbeE.csproj'.
+info : PackageReference for package 'ChessDotNet' version '*' added to file '/tmp/probe/e/ProbeE.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/e/obj/project.assets.json
+log  : Restored /tmp/probe/e/ProbeE.csproj (in 587 ms).
+--- add Chessie * ---
+info : Package 'Chessie' is compatible with all the specified frameworks in project '/tmp/probe/e/ProbeE.csproj'.
+info : PackageReference for package 'Chessie' version '*' added to file '/tmp/probe/e/ProbeE.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/e/obj/project.assets.json
+log  : Restored /tmp/probe/e/ProbeE.csproj (in 1.07 sec).
+--- restore /tmp/probe/e ---
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+### Group E - third-party chess libs
+  ChessDotNet                                requested=*            resolved=1.0.0
+  Chessie                                    requested=*            resolved=0.6.0
+
+--- new ProbeF ---
+Restore succeeded.
+
+
+--- add SharpCompress * ---
+info : Package 'SharpCompress' is compatible with all the specified frameworks in project '/tmp/probe/f/ProbeF.csproj'.
+info : PackageReference for package 'SharpCompress' version '*' added to file '/tmp/probe/f/ProbeF.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/f/obj/project.assets.json
+log  : Restored /tmp/probe/f/ProbeF.csproj (in 458 ms).
+--- add System.IO.Hashing * ---
+info : Package 'System.IO.Hashing' is compatible with all the specified frameworks in project '/tmp/probe/f/ProbeF.csproj'.
+info : PackageReference for package 'System.IO.Hashing' version '*' added to file '/tmp/probe/f/ProbeF.csproj'.
+info : Writing assets file to disk. Path: /tmp/probe/f/obj/project.assets.json
+log  : Restored /tmp/probe/f/ProbeF.csproj (in 389 ms).
+--- restore /tmp/probe/f ---
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+### Group F - importer helpers
+  SharpCompress                              requested=*            resolved=1.0.0
+  System.IO.Hashing                          requested=*            resolved=10.0.12
+
