@@ -318,9 +318,9 @@ public sealed class Position
         throw new InvalidOperationException($"No {side} king on the board.");
     }
 
-    public bool IsInCheck(Side side) => IsSquareAttackedBy(FindKing(side), side.Other());
+    public bool IsSideInCheck(Side side) => IsSquareAttackedBy(FindKing(side), side.Other());
 
-    public bool IsInCheck => IsInCheck(SideToMove);
+    public bool IsInCheck => IsSideInCheck(SideToMove);
 
     // --------------------------------------------------------------------------------------
     // Move generation

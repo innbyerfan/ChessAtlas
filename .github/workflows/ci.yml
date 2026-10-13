@@ -32,7 +32,11 @@ jobs:
           cache: false
 
       - name: Prepare
-        run: mkdir -p ci-artifacts
+        run: |
+          mkdir -p ci-artifacts
+          # ci-artifacts/ci-log.txt is committed, so it would otherwise grow without bound and mix
+          # this run's output with previous runs'. Start every run from an empty file.
+          : > ci-artifacts/ci-log.txt
 
       - name: Restore
         run: dotnet restore ChessAtlas.sln 2>&1 | tee -a ci-artifacts/ci-log.txt

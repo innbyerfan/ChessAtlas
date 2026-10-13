@@ -97,7 +97,7 @@ public static class PgnWriter
     private static string EscapeTagValue(string value) =>
         value.Replace("\\", "\\\\").Replace("\"", "\\\"");
 
-    private readonly struct Emitter
+    private struct Emitter
     {
         private readonly StringBuilder _sb;
         private readonly int _max;
