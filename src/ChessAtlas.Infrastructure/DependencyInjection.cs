@@ -47,13 +47,9 @@ public static class DependencyInjection
         var directory = Path.GetDirectoryName(Path.GetFullPath(options.DatabasePath));
         if (!string.IsNullOrEmpty(directory)) Directory.CreateDirectory(directory);
 
-        var connectionString = new SqliteConnectionStringBuilder
-        {
-            DataSource = options.DatabasePath,
-            // The catalogue import writes in batches; WAL keeps readers responsive during a write.
-            JournalMode = SqliteJournalMode.Wal,
-            CacheSize = -8000, // 8 MB page cache
-        }.ToString();
+        // Journal mode and cache size are PRAGMAs, not connection-string keys - see MigrateAsync,
+        // which applies them once per database rather than pretending the builder has them.
+        var connectionString = new SqliteConnectionStringBuilder { DataSource = options.DatabasePath }.ToString();
 
         services.AddDbContext<ChessAtlasDbContext>(builder => builder.UseSqlite(connectionString));
 
@@ -85,6 +81,13 @@ public static class DependencyInjection
     public static async Task MigrateAsync(IServiceProvider services, CancellationToken cancellationToken = default)
     {
         var db = services.GetRequiredService<ChessAtlasDbContext>();
+
+        // WAL lets a reader stay responsive while the catalogue import writes in batches, and the
+        // larger page cache matters once the opening tables are fully populated. Both are per-database
+        // settings, so they are applied here rather than on every connection string.
+        await db.Database.ExecuteSqlRawAsync("PRAGMA journal_mode=WAL;", cancellationToken).ConfigureAwait(false);
+        await db.Database.ExecuteSqlRawAsync("PRAGMA cache_size=-8000;", cancellationToken).ConfigureAwait(false);
+
         await db.Database.MigrateAsync(cancellationToken).ConfigureAwait(false);
     }
 

@@ -7,6 +7,8 @@
     <OutputType>Exe</OutputType>
     <!-- xunit.v3 generates the entry point; the test SDK must not add a second one. -->
     <GenerateProgramFile>false</GenerateProgramFile>
+    <!-- .NET 10 no longer runs Microsoft.Testing.Platform through the VSTest target. -->
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
 
   <ItemGroup>
