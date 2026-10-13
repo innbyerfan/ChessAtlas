@@ -84,3 +84,29 @@ The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Applicatio
 The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
 
 ASSERTION: test assemblies reporting totals: 0, total=0, passed=0, failed=0
+  Determining projects to restore...
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Application/ChessAtlas.Application.csproj (in 1.33 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/ChessAtlas.Domain.Tests.csproj (in 1.82 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj (in 5 ms).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/ChessAtlas.Infrastructure.Tests.csproj (in 3.31 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/ChessAtlas.Application.Tests.csproj (in 1.7 sec).
+  Restored /home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Infrastructure/ChessAtlas.Infrastructure.csproj (in 3.56 sec).
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/Position.cs(323,17): error CS0102: The type 'Position' already contains a definition for 'IsInCheck' [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/PgnWriter.cs(104,21): error CS8340: Instance fields of readonly structs must be readonly. [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
+
+Build FAILED.
+
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/Position.cs(323,17): error CS0102: The type 'Position' already contains a definition for 'IsInCheck' [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
+/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/Chess/PgnWriter.cs(104,21): error CS8340: Instance fields of readonly structs must be readonly. [/home/runner/work/ChessAtlas/ChessAtlas/src/ChessAtlas.Domain/ChessAtlas.Domain.csproj]
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:03.41
+Test run for /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/bin/Release/net10.0/ChessAtlas.Application.Tests.dll (.NETCoreApp,Version=v10.0)
+The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Application.Tests/bin/Release/net10.0/ChessAtlas.Application.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
+Test run for /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/bin/Release/net10.0/ChessAtlas.Infrastructure.Tests.dll (.NETCoreApp,Version=v10.0)
+The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Infrastructure.Tests/bin/Release/net10.0/ChessAtlas.Infrastructure.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
+Test run for /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll (.NETCoreApp,Version=v10.0)
+The argument /home/runner/work/ChessAtlas/ChessAtlas/tests/ChessAtlas.Domain.Tests/bin/Release/net10.0/ChessAtlas.Domain.Tests.dll is invalid. Please use the /help option to check the list of valid arguments.
+
+ASSERTION: test assemblies reporting totals: 0, total=0, passed=0, failed=0
