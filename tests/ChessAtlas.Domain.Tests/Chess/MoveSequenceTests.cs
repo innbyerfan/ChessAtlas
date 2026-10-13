@@ -92,7 +92,7 @@ public sealed class MoveSequenceTests
 
         var blackFirst = MoveSequence.FromSan(
             "e5",
-            "rnbqkbnr/pppp1ppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
+            "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1");
 
         Assert.Equal("1... e5", blackFirst.ToSanText());
     }

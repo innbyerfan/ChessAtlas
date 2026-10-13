@@ -43,8 +43,13 @@ public sealed class OpeningCatalogPersistenceTests : IDisposable
     [Fact]
     public void Migrations_create_the_expected_schema()
     {
+        // __EFMigrationsLock is created by EF Core 10's SQLite migrator alongside the history table.
         Assert.Equal(
-            new[] { "DataProvenances", "OpeningAliases", "OpeningLines", "Openings", "__EFMigrationsHistory" },
+            new[]
+            {
+                "DataProvenances", "OpeningAliases", "OpeningLines", "Openings",
+                "__EFMigrationsHistory", "__EFMigrationsLock",
+            },
             _db.TableNames());
 
         var indexes = _db.IndexNames();
@@ -220,7 +225,9 @@ public sealed class OpeningCatalogPersistenceTests : IDisposable
 
         var page = await Repository().SearchAsync(new OpeningSearchQuery { PageSize = 3 });
 
-        Assert.Equal(5, page.TotalCount);
+        // Six, not five: "Amar Opening: Paris Gambit" makes the importer create its ancestor
+        // "Amar Opening", which is an opening in its own right.
+        Assert.Equal(6, page.TotalCount);
         Assert.Equal(3, page.Items.Count);
         Assert.Equal(2, page.TotalPages);
         Assert.True(page.HasNextPage);
@@ -280,7 +287,11 @@ public sealed class OpeningCatalogPersistenceTests : IDisposable
         var page = await Repository().SearchAsync(
             new OpeningSearchQuery { Sort = OpeningSortOrder.Eco, PageSize = 100 });
 
-        Assert.Equal(new[] { "A00", "B20", "B90", "C60", "C65" }, page.Items.Select(i => i.EcoCode));
+        // The generated "Amar Opening" ancestor carries no ECO code and sorts after the coded ones,
+        // which is the behaviour this test exists to pin down.
+        Assert.Equal(
+            new string?[] { "A00", "B20", "B90", "C60", "C65", null },
+            page.Items.Select(i => i.EcoCode));
     }
 
     [Fact]
