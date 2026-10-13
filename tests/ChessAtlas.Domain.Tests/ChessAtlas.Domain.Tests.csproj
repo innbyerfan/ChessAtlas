@@ -3,6 +3,13 @@
   <PropertyGroup>
     <RootNamespace>ChessAtlas.Domain.Tests</RootNamespace>
     <IsPackable>false</IsPackable>
+    <!--
+      xUnit1051 asks every CancellationToken-accepting call to pass TestContext.Current.CancellationToken.
+      These tests exercise cancellation explicitly where it matters (see the cancellation tests) and
+      use the default token everywhere else on purpose, so the rule is noise here. Suppressed rather
+      than deleted from the analyser set, so it can be turned back on per file.
+    -->
+    <NoWarn>$(NoWarn);xUnit1051</NoWarn>
     <!-- xunit v3 runs as its own executable under Microsoft.Testing.Platform. -->
     <OutputType>Exe</OutputType>
     <!-- xunit.v3 generates the entry point; the test SDK must not add a second one. -->

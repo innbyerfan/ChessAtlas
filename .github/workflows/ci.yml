@@ -49,9 +49,15 @@ jobs:
 
       - name: Test
         run: |
-          # No VSTest-style --logger flags: .NET 10 drives Microsoft.Testing.Platform, which
-          # rejects them. xunit.v3 is an MTP-native runner, so the default output is enough.
-          dotnet test ChessAtlas.sln -c Release --no-build 2>&1 | tee -a ci-artifacts/ci-log.txt
+          # Run each test project's own executable. `dotnet test` still routes through the VSTest
+          # target, which Microsoft.Testing.Platform refuses on the .NET 10 SDK; xunit.v3 projects
+          # are executables, so invoking them directly is both supported and faster.
+          status=0
+          for proj in tests/ChessAtlas.Domain.Tests tests/ChessAtlas.Application.Tests tests/ChessAtlas.Infrastructure.Tests; do
+            echo "===== $proj =====" | tee -a ci-artifacts/ci-log.txt
+            dotnet run --project "$proj" -c Release --no-build 2>&1 | tee -a ci-artifacts/ci-log.txt || status=1
+          done
+          exit $status
 
       - name: Assert tests actually ran
         shell: python
