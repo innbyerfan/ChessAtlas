@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -22,7 +21,7 @@ namespace ChessAtlas.Infrastructure.Persistence.Migrations
                     License = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
                     VersionOrCommit = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Checksum = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    RetrievedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    RetrievedAt = table.Column<long>(type: "INTEGER", nullable: false),
                     RedistributionAllowed = table.Column<bool>(type: "INTEGER", nullable: false),
                     Notes = table.Column<string>(type: "TEXT", maxLength: 2000, nullable: true)
                 },
@@ -45,8 +44,8 @@ namespace ChessAtlas.Infrastructure.Persistence.Migrations
                     Description = table.Column<string>(type: "TEXT", maxLength: 4000, nullable: true),
                     Difficulty = table.Column<int>(type: "INTEGER", nullable: false),
                     ParentOpeningId = table.Column<int>(type: "INTEGER", nullable: true),
-                    CreatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
-                    UpdatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
+                    CreatedAtUtc = table.Column<long>(type: "INTEGER", nullable: false),
+                    UpdatedAtUtc = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,8 +102,8 @@ namespace ChessAtlas.Infrastructure.Persistence.Migrations
                     Rationale = table.Column<string>(type: "TEXT", maxLength: 4000, nullable: true),
                     Notes = table.Column<string>(type: "TEXT", maxLength: 4000, nullable: true),
                     ProvenanceId = table.Column<int>(type: "INTEGER", nullable: true),
-                    CreatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
-                    UpdatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
+                    CreatedAtUtc = table.Column<long>(type: "INTEGER", nullable: false),
+                    UpdatedAtUtc = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
