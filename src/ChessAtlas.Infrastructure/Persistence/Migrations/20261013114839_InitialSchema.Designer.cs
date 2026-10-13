@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChessAtlas.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ChessAtlasDbContext))]
-    [Migration("20261013113703_InitialSchema")]
+    [Migration("20261013114839_InitialSchema")]
     partial class InitialSchema
     {
         /// <inheritdoc />
