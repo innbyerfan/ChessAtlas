@@ -49,18 +49,22 @@ jobs:
 
       - name: Test
         run: |
-          dotnet test ChessAtlas.sln -c Release --no-build \
-            --logger "console;verbosity=normal" \
-            2>&1 | tee -a ci-artifacts/ci-log.txt
+          # No VSTest-style --logger flags: .NET 10 drives Microsoft.Testing.Platform, which
+          # rejects them. xunit.v3 is an MTP-native runner, so the default output is enough.
+          dotnet test ChessAtlas.sln -c Release --no-build 2>&1 | tee -a ci-artifacts/ci-log.txt
+          echo "--- dotnet test --help (recorded once, to keep this workflow honest) ---" \
+            | tee -a ci-artifacts/ci-log.txt
+          dotnet test --help 2>&1 | head -40 | tee -a ci-artifacts/ci-log.txt
 
       - name: Assert tests actually ran
         shell: python
         run: |
           import re, sys, pathlib
           log = pathlib.Path("ci-artifacts/ci-log.txt").read_text(errors="replace")
-          totals = [int(n) for n in re.findall(r"Total:\s*(\d+)", log)]
-          failed = sum(int(n) for n in re.findall(r"Failed:\s*(\d+)", log))
-          passed = sum(int(n) for n in re.findall(r"Passed:\s*(\d+)", log))
+          # VSTest prints "Total: 42"; MTP prints "total: 42". Match either.
+          totals = [int(n) for n in re.findall(r"(?i)\btotal[:=]\s*(\d+)", log)]
+          failed = sum(int(n) for n in re.findall(r"(?i)\bfailed[:=]\s*(\d+)", log))
+          passed = sum(int(n) for n in re.findall(r"(?i)\bpassed[:=]\s*(\d+)", log))
           summary = f"test assemblies reporting totals: {len(totals)}, total={sum(totals)}, passed={passed}, failed={failed}"
           print(summary)
           pathlib.Path("ci-artifacts/ci-log.txt").open("a").write("\nASSERTION: " + summary + "\n")

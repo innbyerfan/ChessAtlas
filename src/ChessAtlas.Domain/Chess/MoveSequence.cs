@@ -42,7 +42,7 @@ public sealed class MoveSequence : IEquatable<MoveSequence>
     /// <summary>Builds a line from SAN move text such as <c>1. e4 e5 2. Nf3 Nc6</c>.</summary>
     public static MoveSequence FromSan(string sanText, string? startingFen = null)
     {
-        ArgumentException.ThrowIfNull(sanText);
+        ArgumentNullException.ThrowIfNull(sanText);
 
         var fen = startingFen ?? Position.StandardFen;
         var position = Position.FromFen(fen);
@@ -69,7 +69,7 @@ public sealed class MoveSequence : IEquatable<MoveSequence>
     /// <summary>Builds a line from UCI move text such as <c>e2e4 e7e5 g1f3</c>.</summary>
     public static MoveSequence FromUci(string uciText, string? startingFen = null)
     {
-        ArgumentException.ThrowIfNull(uciText);
+        ArgumentNullException.ThrowIfNull(uciText);
 
         var fen = startingFen ?? Position.StandardFen;
         var position = Position.FromFen(fen);

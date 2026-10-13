@@ -3,6 +3,8 @@
   <PropertyGroup>
     <RootNamespace>ChessAtlas.Domain.Tests</RootNamespace>
     <IsPackable>false</IsPackable>
+    <!-- xunit v3 runs as its own executable under Microsoft.Testing.Platform. -->
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
-    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.v3" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
   </ItemGroup>
 

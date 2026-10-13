@@ -20,9 +20,12 @@ namespace ChessAtlas.Domain.Provenance;
 /// </summary>
 public sealed class DataProvenance
 {
+    // EF Core materialises through this constructor. Every non-nullable property gets a value so
+    // the compiler can prove the type is never half-built, even before Create() fills it in.
     private DataProvenance()
     {
         Provider = string.Empty;
+        Uri = string.Empty;
         License = string.Empty;
     }
 
